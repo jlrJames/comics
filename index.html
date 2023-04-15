@@ -5,8 +5,9 @@
 body {
   background-color: #F5F5DC;
 }
-.center {
+.container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -35,14 +36,16 @@ button:hover {
   background-color: #D2691E;
 }
 .textbox {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: #F5F5DC;
     border: none;
     font-size: 20px;
     text-align: center;
+    margin-top: 20px;
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 </style>
 <script>
@@ -56,17 +59,17 @@ function changeImage(increment) {
 </head>
 <body>
 
-<div class="center">
+<div class="container">
+    <div class="title">Child Entrapment</div>
     <img id="image" src="image1.png" alt="image">
+    <div class="textbox">
+        <p>This is my first installment of my comic. Clikcing next shows the original paper drawing of the comic. Which do you like better?</p>
+    </div>
 </div>
 
 <div class="buttons">
     <button onclick="changeImage(-1)">Back</button>
     <button onclick="changeImage(1)">Forward</button>
-</div>
-
-<div class="textbox">
-    <p>Here we have the first installment of my comic. Clicking next shows the original paper drawing</p>
 </div>
 
 </body>
