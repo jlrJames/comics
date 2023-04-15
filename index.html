@@ -34,16 +34,24 @@ button:hover {
   background-color: #1E90FF;
 }
 </style>
+<script>
+let currentImage = 1;
+
+function changeImage() {
+    currentImage++;
+    document.getElementById("image").src = "image" + currentImage + ".jpg";
+}
+</script>
 </head>
 <body>
 
 <div class="center">
-  <img src="EntrappingChildDigtal.png" alt="image">
+    <img id="image" src="image1.jpg" alt="image">
 </div>
 
 <div class="buttons">
-  <button>Back</button>
-  <button>Forward</button>
+    <button>Back</button>
+    <button onclick="changeImage()">Forward</button>
 </div>
 
 </body>
