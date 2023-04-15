@@ -3,7 +3,7 @@
 <head>
 <style>
 body {
-  background-color: #FFF0F5;
+  background-color: #F0FFF0;
 }
 .container {
   display: flex;
@@ -16,17 +16,18 @@ body {
 img {
   max-width: calc(100% - 40px);
   max-height: calc(100% - 40px);
-  border: 5px solid #FFB6C1;
+  border: 5px solid #90EE90;
   padding: 20px;
 }
 .buttons {
-  position: fixed;
+  padding: 50px;
+  display: flex;
   bottom: 10px;
   left: 50%;
-  transform: translateX(-50%);
+  align-items: center;
 }
 button {
-  background-color: #FFB6C1;
+  background-color: #90EE90;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -34,27 +35,30 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background-color: #FF69B4;
+  background-color: #3CB371;
 }
 .textbox {
-    background-color: #FFF0F5;
+    background-color: #F5F5DC;
     border: none;
     font-size: 20px;
     text-align: center;
     margin-top: 20px;
 }
 .title {
-    font-size: 24px;
+     margin: 70px;
+     display: flex;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 .banner {
-    position: fixed;
+     display: flex;
+    
     top: 0;
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: #FFB6C1;
+    background-color: #90EE90;
     display:flex; 
     justify-content:center; 
     align-items:center; 
@@ -68,28 +72,29 @@ let currentImage = 1;
 
 function changeImage(increment) {
     currentImage += increment;
-    document.getElementById("image").src = "image" + currentImage + ".jpg";
+    document.getElementById("image").src = "image" + currentImage + ".png";
 }
 </script>
 </head>
 <body>
 
 <div class="banner">
-    <img class="logo" src="your-logo-source-here" alt="logo">
+     <!--<img class="logo" src="your-logo-source-here">-->
 </div>
-
+      
 <div class="container">
-    <div class="title">Your Title Here</div>
-    <img id="image" src="image1.jpg" alt="image">
+    <div class="title">Child Entrapment</div>
+    <img id="image" src="image1.png" alt="image">
+    <div class="buttons">
+     <button onclick="changeImage(-1)">Back</button>
+     <button onclick="changeImage(1)">Forward</button>
+ </div>
     <div class="textbox">
-        <p>Your text here</p>
+        <p>This is my first installment of my comic. Clicking next shows the original paper drawing of the comic. Which do you like better?</p>
     </div>
 </div>
 
-<div class="buttons">
-    <button onclick="changeImage(-1)">Back</button>
-    <button onclick="changeImage(1)">Forward</button>
-</div>
+
 
 </body>
 </html>
