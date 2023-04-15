@@ -3,7 +3,7 @@
 <head>
 <style>
 body {
-  background-color: #F0F8FF;
+  background-color: #F5F5DC;
 }
 .center {
   display: flex;
@@ -12,9 +12,10 @@ body {
   height: 100vh;
 }
 img {
-  max-width: 100%;
-  max-height: 100%;
-  border: 5px solid #ADD8E6;
+  max-width: calc(100% - 40px);
+  max-height: calc(100% - 40px);
+  border: 5px solid #DEB887;
+  padding: 20px;
 }
 .buttons {
   position: fixed;
@@ -23,7 +24,7 @@ img {
   transform: translateX(-50%);
 }
 button {
-  background-color: #ADD8E6;
+  background-color: #DEB887;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -31,7 +32,17 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background-color: #1E90FF;
+  background-color: #D2691E;
+}
+.textbox {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #F5F5DC;
+    border: none;
+    font-size: 20px;
+    text-align: center;
 }
 </style>
 <script>
@@ -39,19 +50,23 @@ let currentImage = 1;
 
 function changeImage(increment) {
     currentImage += increment;
-    document.getElementById("image").src = "image" + currentImage + ".png";
+    document.getElementById("image").src = "image" + currentImage + ".jpg";
 }
 </script>
 </head>
 <body>
 
 <div class="center">
-    <img id="image" src="image1.png" alt="image">
+    <img id="image" src="image1.jpg" alt="image">
 </div>
 
 <div class="buttons">
     <button onclick="changeImage(-1)">Back</button>
     <button onclick="changeImage(1)">Forward</button>
+</div>
+
+<div class="textbox">
+    <p>Your text here</p>
 </div>
 
 </body>
