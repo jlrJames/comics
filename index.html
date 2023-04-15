@@ -3,20 +3,21 @@
 <head>
 <style>
 body {
-  background-color: #F5F5DC;
+  background-color: #FFF0F5;
 }
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
 }
 img {
   max-width: calc(100% - 40px);
   max-height: calc(100% - 40px);
-  border: 5px solid #DEB887;
-  margin: 100px;
+  border: 5px solid #FFB6C1;
+  padding: 20px;
 }
 .buttons {
   position: fixed;
@@ -25,7 +26,7 @@ img {
   transform: translateX(-50%);
 }
 button {
-  background-color: #DEB887;
+  background-color: #FFB6C1;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -33,10 +34,10 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background-color: #D2691E;
+  background-color: #FF69B4;
 }
 .textbox {
-    background-color: #F5F5DC;
+    background-color: #FFF0F5;
     border: none;
     font-size: 20px;
     text-align: center;
@@ -47,23 +48,41 @@ button:hover {
     font-weight: bold;
     margin-bottom: 20px;
 }
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #FFB6C1;
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+}
+.logo {
+    height:50px; 
+}
 </style>
 <script>
 let currentImage = 1;
 
 function changeImage(increment) {
     currentImage += increment;
-    document.getElementById("image").src = "image" + currentImage + ".png";
+    document.getElementById("image").src = "image" + currentImage + ".jpg";
 }
 </script>
 </head>
 <body>
 
+<div class="banner">
+    <img class="logo" src="your-logo-source-here" alt="logo">
+</div>
+
 <div class="container">
-    <div class="title">Child Entrapment</div>
-    <img id="image" src="image1.png" alt="image">
+    <div class="title">Your Title Here</div>
+    <img id="image" src="image1.jpg" alt="image">
     <div class="textbox">
-        <p>This is my first installment of my comic. Clikcing next shows the original paper drawing of the comic. Which do you like better?</p>
+        <p>Your text here</p>
     </div>
 </div>
 
