@@ -37,8 +37,8 @@ button:hover {
 <script>
 let currentImage = 1;
 
-function changeImage() {
-    currentImage++;
+function changeImage(increment) {
+    currentImage += increment;
     document.getElementById("image").src = "image" + currentImage + ".png";
 }
 </script>
@@ -50,8 +50,8 @@ function changeImage() {
 </div>
 
 <div class="buttons">
-    <button>Back</button>
-    <button onclick="changeImage()">Forward</button>
+    <button onclick="changeImage(-1)">Back</button>
+    <button onclick="changeImage(1)">Forward</button>
 </div>
 
 </body>
